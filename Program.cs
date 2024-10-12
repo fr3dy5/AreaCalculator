@@ -8,7 +8,8 @@ double area;
 
 do {
     Console.WriteLine("What type of shape (R)ectangle, (T)riangle, or (C)ircle?");
-    shape = Console.ReadLine()[0];
+    //if readline returns not null take first character or \0 if empty
+    shape = Console.ReadLine()?.FirstOrDefault() ?? '\0';
     length = 0;
     width = 0;
     tribase = 0;
