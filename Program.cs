@@ -10,12 +10,6 @@ do {
     Console.WriteLine("What type of shape (R)ectangle, (T)riangle, or (C)ircle?");
     //if readline returns not null take first character or \0 if empty
     shape = Console.ReadLine()?.FirstOrDefault() ?? '\0';
-    length = 0;
-    width = 0;
-    tribase = 0;
-    height = 0;
-    radius = 0;
-    area = 0;
 
     switch (shape){
         case 'R':{
@@ -23,7 +17,7 @@ do {
             double.TryParse(Console.ReadLine(), out length);
             Console.WriteLine("Enter with width: ");
             double.TryParse(Console.ReadLine(), out width);
-            area = Math.Round((length * width), 2);
+            area = Math.Round(length * width, 2);
             Console.WriteLine($"The area of this rectangle is {area:f2}");
             break;}
         case 'T':{
@@ -31,13 +25,13 @@ do {
             double.TryParse(Console.ReadLine(), out tribase);
             Console.WriteLine("Enter with height: ");
             double.TryParse(Console.ReadLine(), out height);
-            area = Math.Round((tribase * height) / 2, 2);
+            area = Math.Round(tribase * height / 2, 2);
             Console.WriteLine($"The area of this triangle is {area:f2}");
             break;}
         case 'C':{
             Console.WriteLine("Enter the radius: ");
             double.TryParse(Console.ReadLine(), out radius);
-            area = Math.Round((radius * radius * Math.PI), 2);
+            area = Math.Round(radius * radius * Math.PI, 2);
             Console.WriteLine($"The area of this circle is {area:f2}");
             break;}
         case 'E':
