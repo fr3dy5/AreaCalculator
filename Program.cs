@@ -23,7 +23,7 @@ do {
             Console.WriteLine("Enter with width: ");
             double.TryParse(Console.ReadLine(), out width);
             area = Math.Round((length * width), 2);
-            Console.WriteLine(area);
+            Console.WriteLine($"The area of this rectangle is {area:f2}");
             break;}
         case 'T':{
             Console.WriteLine("Enter the base: ");
@@ -31,13 +31,13 @@ do {
             Console.WriteLine("Enter with height: ");
             double.TryParse(Console.ReadLine(), out height);
             area = Math.Round((tribase * height) / 2, 2);
-            Console.WriteLine(area);
+            Console.WriteLine($"The area of this triangle is {area:f2}");
             break;}
         case 'C':{
             Console.WriteLine("Enter the radius: ");
             double.TryParse(Console.ReadLine(), out radius);
             area = Math.Round((radius * radius * Math.PI), 2);
-            Console.WriteLine(area);
+            Console.WriteLine($"The area of this circle is {area:f2}");
             break;}
         case 'E':
             Console.WriteLine("Exiting Calculator");
