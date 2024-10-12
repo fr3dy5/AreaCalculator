@@ -17,26 +17,30 @@ do {
     area = 0;
 
     switch (shape){
-        case 'R':
-            Console.Write("Enter the length: ");
+        case 'R':{
+            Console.WriteLine("Enter the length: ");
             double.TryParse(Console.ReadLine(), out length);
-            Console.Write("Enter with width: ");
+            Console.WriteLine("Enter with width: ");
             double.TryParse(Console.ReadLine(), out width);
-            area = (length * width);
+            area = Math.Round((length * width), 2);
             Console.WriteLine(area);
-            break;
-        case 'T':
-            Console.Write("Enter the base: ");
+            break;}
+        case 'T':{
+            Console.WriteLine("Enter the base: ");
             double.TryParse(Console.ReadLine(), out tribase);
-            Console.Write("Enter with height: ");
+            Console.WriteLine("Enter with height: ");
             double.TryParse(Console.ReadLine(), out height);
-            break;
-        case 'C':
-            Console.Write("Enter the radius: ");
+            area = Math.Round((tribase * height) / 2, 2);
+            Console.WriteLine(area);
+            break;}
+        case 'C':{
+            Console.WriteLine("Enter the radius: ");
             double.TryParse(Console.ReadLine(), out radius);
-            break;
+            area = Math.Round((radius * radius * Math.PI), 2);
+            Console.WriteLine(area);
+            break;}
         case 'E':
-            Console.Write("Exiting Calculator");
+            Console.WriteLine("Exiting Calculator");
             break;
         default: 
             Console.WriteLine("Invalid shape type!");
