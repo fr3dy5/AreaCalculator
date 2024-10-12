@@ -1,7 +1,4 @@
-﻿Console.WriteLine("What type of shape (R)ectangle, (T)riangle, or (C)ircle?");
-
-string shape = Console.ReadLine()[0];
-
+﻿char shape;
 double length;
 double width;
 double tribase;
@@ -10,17 +7,21 @@ double radius;
 double area;
 
 do {
+    Console.WriteLine("What type of shape (R)ectangle, (T)riangle, or (C)ircle?");
+    shape = Console.ReadLine()[0];
+
     switch (shape){
-        case 'R' 
+        case 'R':
+        
             break;
-        case 'T' 
+        case 'T':
             break;
-        case 'C' 
+        case 'C':
             break;
-        case 'E' 
+        case 'E':
             break;
-        default 
-            Console.WriteLine("Invalid shape type!")
+        default: 
+            Console.WriteLine("Invalid shape type!");
             break;
     }
 } while (shape != 'E');
